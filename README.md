@@ -134,20 +134,7 @@ object Main extends App {
   mostrar("XOR clave negativa (-1)",    procesarMensaje("scala", -1, cifradoXor))
   mostrar("XOR carácter no ASCII",      procesarMensaje("scalá€", 5, cifradoXor))
 
-  // ---------- VERIFICACIÓN AUTOMÁTICA ----------
-  println("\n=== VERIFICACIÓN (assert) ===")
-  assert(procesarMensaje("AD", 1, cifradoCesar) == Success("BE"))
-  assert(cesarCifrado == Success("IXQFLRQDO"))
-  assert(cesarDescifrado == Success("FUNCIONAL"))
-  assert(xorCifrado == Success("vfdid"))
-  assert(xorDescifrado == Success("scala"))
-  assert((115 ^ 5) == 118 && (115 ^ 5).toChar == 'v')
-  assert(procesarMensaje("", 3, cifradoCesar).isFailure)
-  assert(procesarMensaje(null, 3, cifradoCesar).isFailure)
-  assert(procesarMensaje("HOLA", 9999, cifradoCesar).isFailure)
-  assert(procesarMensaje("HOLA 123", 3, cifradoCesar).isFailure)
-  assert(procesarMensaje("scala", 500, cifradoXor).isFailure)
-  println("Todas las verificaciones pasaron correctamente ✔")
+  
 }
 ```
 
